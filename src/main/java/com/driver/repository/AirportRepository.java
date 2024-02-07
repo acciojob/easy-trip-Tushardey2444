@@ -12,12 +12,11 @@ import java.util.List;
 
 @Repository
 public class AirportRepository {
-    private HashMap<String, Airport> AirportDb=new HashMap<>();
-    private HashMap<Integer, Flight> FlightDb=new HashMap<>();
-    private HashMap<Integer, Passenger> PassengerDb=new HashMap<>();
-    private HashMap<Flight,List<Passenger>> flightPassengerDb=new HashMap<>();
-
-    private HashMap<Passenger,Integer> passengerBookingDb=new HashMap<>();
+    private final HashMap<String, Airport> AirportDb=new HashMap<>();
+    private final HashMap<Integer, Flight> FlightDb=new HashMap<>();
+    private final HashMap<Integer, Passenger> PassengerDb=new HashMap<>();
+    private final HashMap<Flight,List<Passenger>> flightPassengerDb=new HashMap<>();
+    private final HashMap<Passenger,Integer> passengerBookingDb=new HashMap<>();
 
     public void addAirport(Airport airport){
         String name=airport.getAirportName();

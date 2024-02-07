@@ -6,11 +6,8 @@ import com.driver.model.Flight;
 import com.driver.model.Passenger;
 import com.driver.repository.AirportRepository;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.ArrayList;
+
 import java.util.Date;
 import java.util.List;
 
