@@ -55,7 +55,7 @@ public class AirportService {
             return 0;
         }
         for(Flight flight:flights){
-            if(flight.getFlightDate().equals(date) && flight.getFromCity().equals(airport.getCity())){
+            if(flight.getFlightDate().equals(date) && (flight.getFromCity().equals(airport.getCity()) || flight.getToCity().equals(airport.getCity()))){
                 peoples+=airportRepository.getAllPassengers(flight).size();
             }
         }
