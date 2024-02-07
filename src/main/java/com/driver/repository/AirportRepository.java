@@ -24,7 +24,7 @@ public class AirportRepository {
         AirportDb.put(name,airport);
     }
     public Airport getAirport(String airportName){
-        return AirportDb.get(airportName);
+        return AirportDb.getOrDefault(airportName,null);
     }
     public Flight getFlight(Integer flightId){
         return FlightDb.getOrDefault(flightId,null);

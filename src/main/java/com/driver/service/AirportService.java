@@ -51,7 +51,9 @@ public class AirportService {
         int peoples=0;
         List<Flight> flights=airportRepository.getAllFlights();
         Airport airport=airportRepository.getAirport(airportName);
-
+        if(airport==null){
+            return 0;
+        }
         for(Flight flight:flights){
             if(flight.getFlightDate().equals(date) && flight.getFromCity().equals(airport.getCity())){
                 peoples+=airportRepository.getAllPassengers(flight).size();
